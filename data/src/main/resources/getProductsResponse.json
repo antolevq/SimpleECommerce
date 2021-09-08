@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Books",
+    "price": 12.49,
+    "remote_background": "https://www.stylist.co.uk/images/app/uploads/2019/12/17162852/the-end-of-a-book-1268x845.jpeg?w=1200&h=1&fit=max&auto=format%2Ccompress",
+    "fallback_background": "books_background"
+  },
+  {
+    "id": 2,
+    "name": "DVD",
+    "price": 9.99,
+    "remote_background": "https://hd2.tudocdn.net/834509?w=824&h=464",
+    "fallback_background": "dvd_background"
+  },
+  {
+    "id": 3,
+    "name": "Chocolate bar",
+    "price": 2.38,
+    "remote_background": "https://www.chocolate7.com/wp-content/uploads/2018/10/home_choc7_first-1.jpg",
+    "fallback_background": "chocolate_background"
+  }
+]

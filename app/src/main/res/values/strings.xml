@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SimpleECommerce</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_cart">Shopping cart</string>
+    <string name="shopping_cart">Shopping cart</string>
+    <string name="books">Books</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="empty_cart">Shopping cart is empty</string>
+    <string name="buy">Buy</string>
+    <string name="purchase_ok">Your purchase has been processed!</string>
+    <string name="quantity_price">%1$d  X  %2$s</string>
+    <string name="change_quantity">Change quantity</string>
+</resources>

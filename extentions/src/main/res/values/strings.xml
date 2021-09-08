@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quantity_select">Select the desired quantity</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+</resources>
