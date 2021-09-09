@@ -21,6 +21,13 @@ The application can also be launched from a completely offline device.
 
 
 
+## Extra
+This application was developed using the latest version of Android studio, called Artic fox (both intel and Apple silicon).
+In case you want to compile with an older version, you need to change the gradle version from the build.gradle file at the project level.
+
+
+
+
 
 
    [retrofit]: <https://square.github.io/retrofit/>
