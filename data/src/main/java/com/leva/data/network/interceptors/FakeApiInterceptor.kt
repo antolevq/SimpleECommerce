@@ -36,7 +36,7 @@ class FakeApiInterceptor : Interceptor {
     }
 
     companion object {
-        private const val GET_PRODUCTS_RESPONSE_FILE = "getProductsResponse.json"
-        private const val POST_CART_RESPONSE_FILE = "postCartResponse.json"
+        const val GET_PRODUCTS_RESPONSE_FILE = "getProductsResponse.json"
+        const val POST_CART_RESPONSE_FILE = "postCartResponse.json"
     }
 }

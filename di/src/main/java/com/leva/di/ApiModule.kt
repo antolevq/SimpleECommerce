@@ -7,7 +7,7 @@ import org.koin.dsl.module
 
 val apiServiceModule = module {
     single {
-        RetrofitClient()
+        RetrofitClient(BuildConfig.BASE_URL)
     }
     single<ProductApi> { get<RetrofitClient>().instance().create(ProductApi::class.java) }
 }

@@ -22,8 +22,6 @@ class CartFragment : Fragment() {
 
     private lateinit var binding: FragmentShoppingCartBinding
     private val cartViewModel: CartViewModel by sharedViewModel()
-    private lateinit var adapter: CartAdapter
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -74,9 +72,5 @@ class CartFragment : Fragment() {
             binding.btnBuy.visibility =
                 if (cartItemList.isNullOrEmpty()) View.GONE else View.VISIBLE
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
     }
 }

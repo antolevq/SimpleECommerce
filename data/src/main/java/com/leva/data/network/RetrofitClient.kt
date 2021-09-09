@@ -7,7 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-class RetrofitClient {
+class RetrofitClient(private val baseUrl:String) {
     fun instance(): Retrofit {
         val okHttpClient = OkHttpClient.Builder()
             .readTimeout(TIMEOUT_READ, TimeUnit.SECONDS)
@@ -17,7 +17,7 @@ class RetrofitClient {
             .build()
 
         return Retrofit.Builder()
-            .baseUrl(BuildConfig.BASE_URL)
+            .baseUrl(baseUrl)
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()

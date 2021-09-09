@@ -11,8 +11,10 @@ import com.leva.domain.usecase.ProductUseCase
 import com.leva.extentions.convertToPresentation
 import com.leva.extentions.round
 import com.plexia.domain.DataState
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 
@@ -42,6 +44,7 @@ class CartViewModel(
             productUseCase.postCart(totalAmount = totalAmount, totalItems = totalItems)
                 .onStart {
                     emit(DataState.Loading())
+                    delay(2000) //Simulate server delay
                 }
                 .catch { exception ->
                     emit(DataState.Error(exception.message.orEmpty()))
