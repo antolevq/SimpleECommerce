@@ -18,7 +18,7 @@ fun ImageView.loadImage(backgroundImage: String, fallbackImage: String) {
         .load(backgroundImage)
         .centerCrop()
         .apply(RequestOptions.bitmapTransform(BlurTransformation(4, 3)))
-        .fallback(context.getDrawableImageFromFileName(fallbackImage))
+        .placeholder(context.getDrawableImageFromFileName(fallbackImage))
         .into(this)
 }
 
