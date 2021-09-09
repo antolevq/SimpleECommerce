@@ -4,11 +4,25 @@ import android.content.Context
 import android.widget.NumberPicker
 import androidx.appcompat.app.AlertDialog
 
+/**
+ * Extension Function that return a drawable from a file name
+ * @param fileName a relative path of local image
+ * @return         the related drawable
+ * @see            Drawable
+ */
 fun Context.getDrawableImageFromFileName(fileName: String): Int {
 
     return resources.getIdentifier(fileName, "drawable", packageName)
 }
 
+/**
+ * Extention function that show a numberPicker in dialog
+ * @param minValue      an Int that represent the numberpicker minValue
+ * @param startValue    an Int that show the numberPicker start value
+ * @param maxvalue      an Int that represent the numberpicker maxValue
+ * @see                 NumberPicker
+ * @see                 AlertDialog
+ */
 fun Context.showNumberPickerDialog(
     minValue: Int = 1,
     startValue: Int = 1,

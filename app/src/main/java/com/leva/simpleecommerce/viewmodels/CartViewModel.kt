@@ -34,6 +34,10 @@ class CartViewModel(
     val cartResponse = SingleLiveEvent<DataState<CartResult>>()
 
 
+    /**
+     * Send the cart to the server via the usecase.
+     * To simulate the server call, a delay has been set after the emit of loading
+     */
     fun postCart() {
         viewModelScope.launch {
             val totalAmount =
@@ -55,7 +59,13 @@ class CartViewModel(
         }
     }
 
-
+    /**
+     * Update CartItem list
+     * This function can add an element if not present, or modify one if present.
+     * Quantity set to 0 delete item from list
+     * @param quantity  an int that represents how many products of that type the cart is made up of
+     * @param product   an Product to manipulate
+     */
     fun updateItemsQuantity(quantity: Int, product: Product) {
         when (quantity) {
             0 -> {
@@ -79,15 +89,24 @@ class CartViewModel(
     }
 
 
+    /**
+     * This function update the total Amount to show in view. It returns in euro currency format
+     */
     private fun updateTotalAmount() {
         _totalAmount.postValue(_cartItemList.value?.sumOf { (it.quantity * it.product.price) }
             ?.convertToPresentation())
     }
 
+    /**
+     * This function update a livedata with the sum of all products presents in the cart
+     */
     private fun updateTotalCartItems() {
         _totalCartItems.postValue(_cartItemList.value?.sumOf { it.quantity } ?: 0)
     }
 
+    /**
+     * This function empty cartItemList
+     */
     fun emptyCart() {
         _cartItemList.value = mutableListOf()
         _cartItemList.postValue(_cartItemList.value)
